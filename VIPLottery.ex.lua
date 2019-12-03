@@ -19,7 +19,7 @@ Vips = {}
 
                 if not Vips[P] then 
                 
-                Vips[P] = true
+                Vips[P] = {P:getName(), P} -- {Oyuncu ismi, Oyuncu datası (thePlayer gibi..)} 
                 end
                 
             end
@@ -51,7 +51,7 @@ Vips = {}
 
         function refreshTable()
 
-            Elements = getElementsByType('players')
+            Elements = getElementsByType('player')
 
                 if (GetVIPTable(Elements, getThisResource()))
 
@@ -124,7 +124,7 @@ Vips = {}
         if res.name == 'viplottery' then 
             
             
-            Elements = getElementsByType('players')
+            Elements = getElementsByType('player')
 
                 GetVIPTable(Elements, res)
 
