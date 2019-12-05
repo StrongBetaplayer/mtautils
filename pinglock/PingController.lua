@@ -1,6 +1,6 @@
 
 
-local PINGLIMIT = 3
+local PINGLIMIT = 350
 local SHADER    = DxShader(GradientFX)
 local PINGED    = false
 
