@@ -72,7 +72,9 @@
                 if localPlayer:getOccupiedVehicle() then 
                     setAnalogControlState('brake_reverse', 0)
                 end
-
+                
+                showCursor(false)
+                setAnalogControlState('forwards',0)
                 removeEventHandler('onClientRender', root, loader_render)
             end
         end
@@ -80,6 +82,8 @@
 
         dxDrawImage(screen.x/2 - fit(12.5),screen.y - fit(60),fit(25),fit(25),texture,r,0,0,tocolor(215,215,215,alpha))
         
+        showCursor(true)
+        setAnalogControlState('forwards',0)
 
         if localPlayer:getOccupiedVehicle() then 
 
